@@ -4,7 +4,7 @@ export const salonInfo = {
   fullName: "Silk & Soft Beauty Salon",
   city: "Kanpur",
   tagline: "Your Beauty, Your Signature.",
-  whatsappNumber: "", // Add salon WhatsApp number later
+  whatsappNumber: "09278287100", // Add salon WhatsApp number later
 };
 
 export const categories = [
