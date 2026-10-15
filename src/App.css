@@ -582,6 +582,19 @@ input:focus-visible {
   }
 }
 
+
+.service-details {
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.service-details li::marker {
+  color: var(--gold);
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

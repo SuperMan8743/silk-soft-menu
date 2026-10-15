@@ -3,11 +3,11 @@ import { useMemo, useState } from "react";
 import { categories, services, salonInfo } from "./data/menu";
 import "./App.css";
 
+
 function formatPrice(price) {
-  return price == null
-    ? "Enquire for price"
-    : `₹${price.toLocaleString("en-IN")}`;
+  return price || "Enquire for price";
 }
+
 
 function makeWhatsAppUrl(serviceName) {
   const number = salonInfo.whatsappNumber.replace(/\D/g, "");
@@ -196,7 +196,15 @@ export default function App() {
 
                         <h4>{service.name}</h4>
                         <p className="service-note">
-                          {service.note}
+                        
+{service.details && (
+  <ul className="service-details">
+    {service.details.map((detail) => (
+      <li key={detail}>{detail}</li>
+    ))}
+  </ul>
+)}
+
                         </p>
 
                         <div className="service-bottom">
